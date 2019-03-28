@@ -10,20 +10,20 @@ public class Main {
     public static void main(String[] args) {
         //Define new books
         //Call new methods from the various classes
-        
+
         Book book1 = new Book();
         book1.setAuthor("");
         book1.setTitle("");
-        
+
         Book book2 = new Book();
         book2.setAuthor("");
         book2.setTitle("");
-        
+
         AudioBook audio1 = new AudioBook();
         audio1.setDuration(2);
+
         
-        
-        
+
     }
 }
 
@@ -47,6 +47,15 @@ class Book {
 
     String title;
     String author;
+    String type;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 
     public void setAuthor(String author) {
         this.author = author;
@@ -75,7 +84,16 @@ class AudioBook extends Book {
 }
 
 class BorrowedItems extends Book {
+    
+    String dateFromBook;
 
+    public void setDateFromBook(String dateFromBook) {
+        this.dateFromBook = dateFromBook;
+    }
+
+    public String getDateFromBook() {
+        return dateFromBook;
+    }
 
     void BorrowedItemsCheck(String dateBorrowedString, String dateDueString) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
