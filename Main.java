@@ -84,16 +84,11 @@ class AudioBook extends Book {
 }
 
 class BorrowedItems extends Book {
-    
-    String dateFromBook;
-
-    public void setDateFromBook(String dateFromBook) {
-        this.dateFromBook = dateFromBook;
-    }
-
-    public String getDateFromBook() {
-        return dateFromBook;
-    }
+    /*
+    Pass in the date the book wa borrowed first and the date the book is due as the extra parameters
+    The format is YYYY-MM-DD
+    String maniplulation can be a separate function within that manages this
+    */
 
     void BorrowedItemsCheck(String dateBorrowedString, String dateDueString) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
